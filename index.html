@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 500"
+     id="map"
+     onload="makeDraggable(evt)">
+    <g id="matrix-group" transform="matrix(1 0 0 1 0 0)">
+        <rect x="0" y="0" width="30" height="20" fill="#fafafa"/>
+        <rect x="4" y="5" width="8" height="10" fill="#007bff" class="draggable"/>
+        <rect x="18" y="5" width="8" height="10"   fill="#888" class="static"/>
+    </g>
+
+    <path class="button" onclick="pan(0, 25)" d="M25 5 l6 10 a20 35 0 0 0 -12 0z" />
+    <path class="button" onclick="pan(25, 0)" d="M5 25 l10 -6 a35 20 0 0 0 0 12z" />
+    <path class="button" onclick="pan(0,-25)" d="M25 45 l6 -10 a20, 35 0 0,1 -12,0z" />
+    <path class="button" onclick="pan(-25, 0)" d="M45 25 l-10 -6 a35 20 0 0 1 0 12z" />
+
+    <circle class="button" cx="25" cy="20.5" r="4" onclick="zoom(0.8)"/>
+    <circle class="button" cx="25" cy="29.5" r="4" onclick="zoom(1.25)"/>
+
+</svg>
+
+</body>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</html>
